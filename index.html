@@ -1,56 +1,160 @@
 <html>
-
-<head>
+  <head>
     <title>Timm Preetz</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Instrument+Serif&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Instrument+Serif&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
-        html {
-            background-color: #ececec;
-            margin: 0 auto;
-            max-width: 900px;
+      html {
+        background-color: #fdfdfd;
+        margin: 0 auto;
+        max-width: 900px;
+      }
 
-            font-family: "Instrument Serif", serif;
-            font-weight: 400;
-            font-style: normal;
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      .title,
+      h1,
+      h2 {
+        font-family: "Instrument Serif", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .title {
+        font-size: 1.5em;
+
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        gap: 0.75em;
+
+        span:first-child {
+          font-size: 2em;
         }
+      }
 
-        img {
-            width: 100%;
-            height: auto;
+      section {
+        font-family: "EB Garamond", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+
+        font-size: 1.2em;
+      }
+
+      a,
+      a:visited {
+        color: #0000ee;
+        text-decoration: underline;
+      }
+
+      .project-name {
+        font-family: monospace;
+
+        a {
+          text-decoration: none;
         }
+      }
 
+      @media (width <= 700px) {
         .title {
-            font-size: 2em;
-            display: block;
+          flex-direction: column;
+          gap: 0;
         }
-
-        .details {
-            font-family: "EB Garamond", serif;
-            font-optical-sizing: auto;
-            font-weight: 400;
-            font-style: normal;
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <span class="title">Timm Preetz</span>
-    Software Architecture & Full-Stack Development
+  <body>
+    <div class="title">
+      <span>Timm Preetz</span>
+      <span>Software Architecture & Full-Stack Development</span>
+    </div>
 
-    <br /> <br />
+    <br />
+    <br />
 
     <img src="./timm.jpg" alt="Timm Preetz" />
 
-    <br /> <br />
+    <br />
+    <br />
 
-    <span class="details">
-        Available for freelance work via <a href="https://www.lunaone.de/flutter">LunaONE GmbH</a>.
-    </span>
-</body>
+    <section>
+      Available for freelance work via
+      <a href="https://www.lunaone.de/flutter">LunaONE GmbH</a>.
+      <p>
+        ☞ Contact me via
+        <a href="mailto:timm@lunaone.de?subject=Intro">email</a>,
+        <a
+          href="https://signal.me/#eu/_O0oQsRaoD06zYxEi5gDVAtseTinzhTbBxJC8-W-o2LsSZmrslNHx4isFW40J3Pk"
+          >Signal</a
+        >, or <a href="https://wa.me/message/UUMGUE7LENBRE1">WhatsApp</a>.
+      </p>
+    </section>
 
+    <section>
+      <h2>Open source projects</h2>
+      <ul>
+        <li>
+          <span class="project-name"
+            ><a href="https://pub.dev/packages/passkeys_server" target="_blank"
+              >passkeys_server</a
+            ></span
+          >
+        </li>
+
+        <li>
+          <span class="project-name"
+            ><a
+              href="https://pub.dev/packages/indexed_entity_store"
+              target="_blank"
+              >indexed_entity_store</a
+            ></span
+          >
+        </li>
+
+        <li>
+          <span class="project-name"
+            ><a href="https://pub.dev/packages/state_queue" target="_blank"
+              >state_queue</a
+            ></span
+          >
+        </li>
+
+        <li>
+          <span class="project-name"
+            ><a
+              href="https://pub.dev/packages/sign_in_with_apple"
+              target="_blank"
+              >sign_in_with_apple</a
+            ></span
+          >, a <i>Flutter Favorite</i>, and its
+
+          <a
+            href="https://pub.dev/packages/sign_in_with_apple_server"
+            target="_blank"
+            >server counterpart</a
+          >
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Elsewhere</h2>
+      Find me on <a href="https://www.github.com/tp" rel="me">GitHub</a>,
+      <a href="https://twitter.com/timmpreetz" rel="me">Twitter</a>, or
+      <a href="https://www.linkedin.com/in/timm-preetz" rel="me">LinkedIn</a>.
+    </section>
+  </body>
 </html>
