@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Timm Preetz</title>
+    <link>https://timm.preetz.xyz</link>
+    <description></description>
+    <lastBuildDate>Tue, 25 Nov 2025 08:36:09 +0000</lastBuildDate>
+    <item>
+      <title>hello_world.md</title>
+      <description><![CDATA[plain text desc]]></description>
+      <guid>https://timm.preetz.xyz/posts/hello_world</guid>
+      <pubDate>Tue, 25 Nov 2025 08:36:09 +0000</pubDate>
+      <content:encoded><![CDATA[<h1>Hello World!</h1>
+<p>asdf</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>hello_world2.md</title>
+      <description><![CDATA[plain text desc]]></description>
+      <guid>https://timm.preetz.xyz/posts/hello_world2</guid>
+      <pubDate>Tue, 25 Nov 2025 08:36:09 +0000</pubDate>
+      <content:encoded><![CDATA[<p>asdf</p>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>

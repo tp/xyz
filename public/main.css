@@ -1,0 +1,166 @@
+:root {
+  --main-background: hsl(60deg 100% 97%);
+  --font-color: #010101;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-background: #000;
+    --font-color: #ededec;
+  }
+
+  a,
+  a:visited {
+    color: #0000ee;
+  }
+}
+
+html {
+  background-color: var(--main-background);
+  margin: 0 auto;
+  max-width: 900px;
+  line-height: 1.4;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a,
+a:visited {
+  color: #0000ee;
+  text-decoration: underline;
+}
+
+.title {
+  display: block;
+
+  border-bottom: 0.5px solid rgba(194, 194, 194, 1);
+
+  font-size: 1.5em;
+  font-weight: bold;
+
+  text-align: center;
+
+  a {
+    color: var(--font-color);
+    text-decoration: none;
+  }
+}
+
+ul {
+  margin: 0;
+  padding-left: 1em;
+  list-style-position: inside;
+}
+
+.project-name {
+  font-family: monospace;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: sans-serif;
+}
+
+nav > ul {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a,
+nav a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+@media (width <= 900px) {
+  body {
+    margin: 0;
+  }
+
+  h1,
+  .title,
+  section,
+  nav {
+    padding: 0 8px;
+  }
+}
+
+@media (width >= 900px) {
+  html {
+    font-size: 19px;
+  }
+
+  .project-name {
+    font-size: 0.9em;
+  }
+
+  nav > ul > li:first-child {
+    margin-right: auto;
+    justify-content: flex-end;
+  }
+}
+
+@media (width < calc(900px + 21rem)) {
+  aside > ul {
+    list-style: none;
+    display: inline;
+    padding: 0;
+    margin: 0;
+  }
+
+  aside > ul > li {
+    display: inline;
+  }
+
+  aside > ul > li:not(:last-child)::after {
+    content: ", ";
+  }
+}
+
+@media (width >= calc(900px + 21rem)) {
+  aside > ul {
+    list-style: none;
+  }
+
+  aside {
+    position: absolute;
+    text-align: right;
+    margin-left: calc(-10.5rem);
+    margin-top: 0.2em;
+    width: calc(10rem);
+    font-size: 0.8rem;
+  }
+}
+
+.printOnly {
+  display: none;
+}
+
+@media print {
+  nav {
+    display: none;
+  }
+
+  .printOnly {
+    display: block;
+  }
+
+  .page-break-after {
+    break-after: page;
+  }
+}
