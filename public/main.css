@@ -1,5 +1,6 @@
 :root {
-  --main-background: hsl(60deg 100% 97%);
+  /* --main-background: hsl(60deg 100% 97%); */
+  --main-background: #fafafa;
   --font-color: #010101;
 }
 
@@ -72,8 +73,24 @@ h6 {
   font-family: sans-serif;
 }
 
+nav {
+  background-color: white; /* TODO Adaptable */
+  font-family: "Avenir Next", "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: bold;
+}
+
+nav .name {
+  /* display: inline; */
+  font-size: 1.5rem;
+}
+
+nav .headerImage {
+  width: 30px;
+  border-radius: 15px;
+}
+
 nav > ul {
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   margin: 0;
   padding: 0;
   list-style: none;
