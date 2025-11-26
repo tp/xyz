@@ -72,6 +72,11 @@ main {
   max-width: var(--max-content-width);
   padding: var(--content-padding);
   margin: 0 auto;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
 }
 
 a,
@@ -99,19 +104,32 @@ a:hover {
   }
 }
 
-@media (width >= calc(900px + 21rem)) {
-  aside > ul {
-    list-style: none;
-  }
+aside > ul {
+  list-style: none;
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
 
+@media (width < calc(900px + 21rem)) {
+  aside > ul {
+    > li:not(:last-child)::after {
+      content: ", ";
+    }
+
+    li {
+      display: inline;
+    }
+  }
+}
+
+@media (width >= calc(900px + 21rem)) {
   aside {
-    font-family: serif;
+    font-family: "Baskerville", serif;
     position: absolute;
     text-align: right;
     margin-left: calc(-10.5rem);
-    margin-top: 0.2em;
     width: calc(10rem);
-    font-size: 0.8rem;
   }
 }
 
@@ -130,5 +148,120 @@ a:hover {
 
   .page-break-after {
     break-after: page;
+  }
+}
+
+ul.archive {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  .date {
+    color: var(--foreground-color);
+  }
+}
+
+main.cv {
+  max-width: unset;
+
+  > section {
+    display: grid;
+    grid-template-columns: 10rem minmax(auto, 900px) 10rem;
+    justify-content: center;
+    column-gap: 2rem;
+    grid-template-areas:
+      "date       headline"
+      "-          role"
+      "technology summary";
+
+    > h2 {
+      grid-area: headline;
+      margin: 1em 0 0 0;
+    }
+
+    .date {
+      grid-area: date;
+      justify-self: end;
+      align-self: end;
+
+      font-style: italic;
+    }
+
+    .role {
+      grid-area: role;
+      margin-bottom: 0.5rem;
+    }
+
+    ul.highlights {
+      grid-area: summary;
+      padding-inline-start: 1rem;
+      font-style: italic;
+      margin-block: 0;
+    }
+
+    .technologies {
+      grid-area: technology;
+      text-align: right;
+      margin-block: 0;
+      list-style: none;
+    }
+  }
+}
+
+@media print {
+  main.cv {
+    > section {
+      grid-template-columns: 10rem 1fr;
+    }
+  }
+}
+
+@media screen and (width < calc(900px + 21rem)) {
+  main.cv {
+    > section {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "headline   headline"
+        "role       date"
+        "technology technology"
+        "summary    summary";
+
+      > h2 {
+        margin: 1em 0 0 0;
+      }
+
+      .date {
+        justify-self: unset;
+        align-self: unset;
+        font-style: italic;
+      }
+
+      .role {
+        justify-self: start;
+        font-style: normal;
+        font-weight: bold;
+      }
+
+      ul.highlights {
+        padding-inline-start: 1rem;
+        font-style: italic;
+        margin-block: 0;
+      }
+
+      .technologies {
+        justify-self: start;
+        padding: 0;
+        margin-bottom: 0.5rem;
+        font-family: monospace;
+
+        > li:not(:last-child)::after {
+          content: ", ";
+        }
+
+        li {
+          display: inline;
+        }
+      }
+    }
   }
 }
