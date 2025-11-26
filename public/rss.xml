@@ -4,22 +4,14 @@
     <title>Timm Preetz</title>
     <link>https://timm.preetz.xyz</link>
     <description></description>
-    <lastBuildDate>Tue, 25 Nov 2025 08:36:09 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Nov 2025 09:38:00 +0000</lastBuildDate>
     <item>
-      <title>hello_world.md</title>
+      <title>Re:</title>
       <description><![CDATA[plain text desc]]></description>
-      <guid>https://timm.preetz.xyz/posts/hello_world</guid>
-      <pubDate>Tue, 25 Nov 2025 08:36:09 +0000</pubDate>
-      <content:encoded><![CDATA[<h1>Hello World!</h1>
-<p>asdf</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>hello_world2.md</title>
-      <description><![CDATA[plain text desc]]></description>
-      <guid>https://timm.preetz.xyz/posts/hello_world2</guid>
-      <pubDate>Tue, 25 Nov 2025 08:36:09 +0000</pubDate>
-      <content:encoded><![CDATA[<p>asdf</p>
+      <guid>https://timm.preetz.xyz/p/re</guid>
+      <pubDate>Wed, 26 Nov 2025 09:38:00 +0000</pubDate>
+      <content:encoded><![CDATA[<h1>Re:</h1>
+<p>Back to business.</p>
 ]]></content:encoded>
     </item>
   </channel>
