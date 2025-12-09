@@ -1,0 +1,340 @@
+<html>
+  <head>
+    <title>Full-Stack Flutter - Timm Preetz</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      :root {
+        --main-background: hsl(60deg 100% 97%);
+        --card-background: hsl(60deg 100% 99%);
+        --font-color: var(--dr7-fg);
+        --card-shadow-color: hsl(0deg 0% 0% / 0.38);
+      }
+
+      html,
+      body {
+        margin: 0;
+        font-family: san;
+      }
+
+      body {
+        background-color: var(--main-background);
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10pt;
+        max-width: 700px;
+
+        font-family: "Avenir Next", sans-serif;
+      }
+
+      .carousel {
+        display: flex;
+        flex-flow: row nowrap;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        padding: 0 10pt;
+
+        > div {
+          margin: 10px;
+
+          width: 80%;
+          height: min(400px, calc(100vw - 40px));
+          scroll-snap-align: center;
+          flex: none;
+
+          background-color: var(--card-background);
+          font-family: "Avenir Next";
+          padding: 1rem;
+          border-radius: 10pt;
+          margin-bottom: 1.5rem;
+          box-shadow: 4px 8px 18px var(--card-shadow-color);
+        }
+      }
+
+      .project {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr auto auto auto auto;
+        grid-template-areas:
+          "name         image"
+          "role         image"
+          "platforms    image"
+          "technology   image"
+          "highlights   image";
+        justify-items: start;
+
+        > span {
+          background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        img {
+          grid-area: image;
+
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+
+        .name {
+          grid-area: name;
+          align-self: end;
+          font-weight: bold;
+        }
+
+        .role {
+          grid-area: role;
+          font-style: italic;
+        }
+
+        .platforms {
+          grid-area: platforms;
+        }
+
+        .technology {
+          grid-area: technology / technology / technology / image;
+        }
+
+        .highlights {
+          grid-area: highlights / highlights / highlights / image;
+        }
+      }
+
+      h2 {
+        position: sticky;
+        top: 0;
+        background-color: var(--main-background);
+      }
+
+      .headBW {
+        border-radius: 60px;
+        margin-left: 20px;
+      }
+
+      .video {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="subline"
+      style="display: flex; justify-content: space-between; align-items: center"
+    >
+      <h1>Timm Preetz<br /><i>Full-Stack Flutter App Developer</i></h1>
+
+      <img
+        src="/timm_head_ava_bw.jpg"
+        width="120"
+        height="120"
+        class="headBW"
+      />
+    </div>
+
+    <p class="subline">
+      Whether you want to develop an all-new app, fix bugs in an existing
+      product, improve your app's rating, speed up your backend, or reduce your
+      infrastructure costs: I can help you with my extensive experience as a
+      full-stack architect and software developer.
+    </p>
+
+    <p class="subline">
+      Since 2019, I have focused exclusively on writing
+      <span class="fl">Flutter</span>-based frontends. I like to get involved in
+      the backend, where <i>Go&nbsp;&amp;&nbsp;gRPC</i> are my preferred
+      technologies, which I have deployed at scale in both AWS and GCP – though
+      I can work in any modern tooling which is present in your project.
+    </p>
+
+    <p class="subline">
+      Whether an end-user, B2B, or internal application, the goal is always to
+      make the most out of your investment.
+    </p>
+
+    <p class="subline">
+      Sounds good? Let's talk!<br />
+      ☞&nbsp;<a href="mailto:timm@lunaone.de?subject=Intro">email</a>,
+      <a
+        href="https://signal.me/#eu/_O0oQsRaoD06zYxEi5gDVAtseTinzhTbBxJC8-W-o2LsSZmrslNHx4isFW40J3Pk"
+        >Signal</a
+      >, or <a href="https://wa.me/message/UUMGUE7LENBRE1">WhatsApp</a>.
+    </p>
+
+    <!-- We build your entire app from native plug-ins to bespoke cloud backends.
+
+<hr />
+trust abilities; clear requirements -> fixed budget and timeline. -->
+
+    <div class="video">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/at8PTVF5CJM?si=_U2sNC5nXduZFu9s"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <div>
+      <h2>Previous Engagements</h2>
+
+      <section class="carousel">
+        <div class="project">
+          <img src="/flutter_about_you.jpg" />
+
+          <span class="name">ABOUT YOU</span>
+          <span class="role"
+            >Team Lead / Head of Shop Application Architecture</span
+          >
+          <span class="platforms"
+            >Platforms:
+            <a
+              href="https://apps.apple.com/de/app/about-you-mode-online-shop/id985244644"
+              >iOS</a
+            >,
+            <a
+              href="https://play.google.com/store/apps/details?id=de.aboutyou.mobile.app&hl=de"
+              >Android</a
+            >
+          </span>
+
+          <span class="technology"
+            >Tech: gRPC, <a href="https://pub.dev/packages/cubit">Cubit</a>/<a
+              href="https://pub.dev/packages/state_queue"
+              >StateQueue</a
+            >, Go</span
+          >
+          <span class="highlights"
+            >Highlights: Faster release cadence, improved rating (4.2 → 4.8
+            ⭐️)</span
+          >
+        </div>
+        <div class="project">
+          <img src="/flutter_magicline.jpg" />
+
+          <span class="name">Magicline</span>
+          <span class="role">Senior Flutter Developer</span>
+          <span class="platforms"
+            >Platforms:
+            <a
+              href="https://apps.apple.com/de/app/about-you-mode-online-shop/id985244644"
+              >iOS</a
+            >,
+            <a
+              href="https://play.google.com/store/apps/details?id=de.aboutyou.mobile.app&hl=de"
+              >Android</a
+            >
+          </span>
+
+          <span class="technology"
+            >Tech: gRPC, <a href="https://pub.dev/packages/cubit">Cubit</a>/<a
+              href="https://pub.dev/packages/state_queue"
+              >StateQueue</a
+            >, Go</span
+          >
+          <span class="highlights"
+            >Highlights: Faster release cadence, improved rating (4.2 → 4.8
+            ⭐️)</span
+          >
+        </div>
+        <div class="project">
+          <img src="/flutter_teleson.jpg" />
+
+          <span class="name">TELESON</span>
+          <span class="role"
+            >Team Lead / Head of Shop Application Architecture</span
+          >
+          <span class="platforms"
+            >Platforms:
+            <a
+              href="https://apps.apple.com/de/app/about-you-mode-online-shop/id985244644"
+              >iOS</a
+            >,
+            <a
+              href="https://play.google.com/store/apps/details?id=de.aboutyou.mobile.app&hl=de"
+              >Android</a
+            >
+          </span>
+
+          <span class="technology"
+            >Tech: gRPC, <a href="https://pub.dev/packages/cubit">Cubit</a>/<a
+              href="https://pub.dev/packages/state_queue"
+              >StateQueue</a
+            >, Go</span
+          >
+          <span class="highlights"
+            >Highlights: Faster release cadence, improved rating (4.2 → 4.8
+            ⭐️)</span
+          >
+        </div>
+        <div class="project">
+          <img src="/flutter_mysports.jpg" />
+
+          <span class="name">MySports</span>
+          <span class="role"
+            >Team Lead / Head of Shop Application Architecture</span
+          >
+          <span class="platforms"
+            >Platforms:
+            <a
+              href="https://apps.apple.com/de/app/about-you-mode-online-shop/id985244644"
+              >iOS</a
+            >,
+            <a
+              href="https://play.google.com/store/apps/details?id=de.aboutyou.mobile.app&hl=de"
+              >Android</a
+            >
+          </span>
+
+          <span class="technology"
+            >Tech: gRPC, <a href="https://pub.dev/packages/cubit">Cubit</a>/<a
+              href="https://pub.dev/packages/state_queue"
+              >StateQueue</a
+            >, Go</span
+          >
+          <span class="highlights"
+            >Highlights: Faster release cadence, improved rating (4.2 → 4.8
+            ⭐️)</span
+          >
+        </div>
+      </section>
+    </div>
+
+    <div>
+      <h2>Technologies</h2>
+    </div>
+
+    <div>
+      <h2>Contact</h2>
+
+      To discuss your specific needs, reach out via
+      <a href="mailto:timm@lunaone.de?subject=Intro">email</a>,
+      <a
+        href="https://signal.me/#eu/_O0oQsRaoD06zYxEi5gDVAtseTinzhTbBxJC8-W-o2LsSZmrslNHx4isFW40J3Pk"
+        >Signal</a
+      >, or <a href="https://wa.me/message/UUMGUE7LENBRE1">WhatsApp</a>.
+    </div>
+
+    <ul>
+      <li>
+        Featured Projects/Case Studies: Include links and detailed descriptions
+        for your best mobile and web applications, open-source contributions, or
+        client projects built with Flutter.
+      </li>
+      <li>
+        Expertise and Approach: Clearly articulate your knowledge of the Flutter
+        framework. This should cover how you work with Flutter (e.g., state
+        management approach, testing strategies,design implementation, etc.).
+      </li>
+      <li>
+        App/Project Samples: Provide clear visuals, videos, or links to live
+        demos of the projects you highlight.
+      </li>
+    </ul>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+</html>
